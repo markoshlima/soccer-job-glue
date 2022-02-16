@@ -74,7 +74,7 @@ print("Criando tabela do dataframe")
 rodadas.createOrReplaceTempView('rodadas')
 
 #adiciona uuid
-rodadas = sqlContext.sql('SELECT r.*, TRIM(estadio_nome) as estadio, TRIM(arbitro_nome) as arbitro, TRIM(time_mandante_nome) as time_mandante, TRIM(time_visitante_nome) as time_visitante, TRIM(tecnico_mandante_nome) as tecnico_mandante, TRIM(tecnico_visitate_nome) as tecnico_visitate, uuid() as rodada_id FROM rodadas r')
+rodadas = sqlContext.sql('SELECT r.*, TRIM(estadio_nome) as estadio, TRIM(arbitro_nome) as arbitro, TRIM(time_mandante_nome) as time_mandante, TRIM(time_visitante_nome) as time_visitante, TRIM(tecnico_mandante_nome) as tecnico_mandante, TRIM(tecnico_visitante_nome) as tecnico_visitante, uuid() as rodada_id FROM rodadas r')
 
 #remove colunas desnecessarias
 print("Removendo colunas desnecessarias")
