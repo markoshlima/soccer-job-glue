@@ -78,12 +78,12 @@ rodadas = sqlContext.sql('SELECT r.*, TRIM(estadio_nome) as estadio, TRIM(arbitr
 
 #remove colunas desnecessarias
 print("Removendo colunas desnecessarias")
-rodadas = rodadas.drop('estadio')
-rodadas = rodadas.drop('arbitro')
-rodadas = rodadas.drop('time_mandante')
-rodadas = rodadas.drop('time_visitante')
-rodadas = rodadas.drop('tecnico_mandante')
-rodadas = rodadas.drop('tecnico_visitate')
+rodadas = rodadas.drop('estadio_nome')
+rodadas = rodadas.drop('arbitro_nome')
+rodadas = rodadas.drop('time_mandante_nome')
+rodadas = rodadas.drop('time_visitante_nome')
+rodadas = rodadas.drop('tecnico_mandante_nome')
+rodadas = rodadas.drop('tecnico_visitate_nome')
 rodadas = rodadas.drop(colDefaultName)
 
 #converte para json
